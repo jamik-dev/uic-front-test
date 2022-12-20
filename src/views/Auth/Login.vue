@@ -40,9 +40,7 @@
               </div>
             </div>
             <div class="space-y-[22px] mt-[22.5px]">
-              <form action="?" method="POST">
-                <div class="g-recaptcha" data-sitekey="empty"></div>
-              </form>
+                <vue-recaptcha sitekey="Your key here"></vue-recaptcha>
                 <router-link
                   to="/sponsors"
                   class="bg-[#2E5BFF] rounded-lg block text-center text-[#fff] w-full px-[103px] py-[14px] font-semibold text-md font-rubik"
@@ -56,6 +54,7 @@
 </template>
 
 <script lang="ts" setup>
+import { VueRecaptcha } from 'vue-recaptcha';
 </script>
 
 <style>

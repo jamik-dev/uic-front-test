@@ -63,6 +63,53 @@
               </tr>
               <tr class="h-4"></tr>
             </tbody>
+
+            <tbody>
+              <tr
+                tabindex="0"
+                class="bg-[#fff] text-center h-16"
+              >
+                <td class="rounded-l-lg">
+                  <p
+                    class="text-base font-medium"
+                  >
+                    1
+                  </p>
+                </td>
+                <td>
+                  <p
+                    class="text-base font-medium"
+                  >
+                    Alimov Abror Xabibullayevich
+                  </p>
+                </td>
+                <td>
+                  <p class="text-sm">
+                    +99899 973-72-60
+                  </p>
+                </td>
+                <td>
+                  <p class="text-sm font-bold">
+                    30 000 000 <span class="font-medium text-[#B2B7C1]">UZS</span>
+                  </p>
+                </td>
+                <td>
+                  <p class="text-sm font-bold">0 <span class="font-medium text-[#B2B7C1]">UZS</span></p>
+                </td>
+                <td>
+                  <p class="text-sm">
+                    15.01.2021
+                  </p>
+                </td>
+                <td>
+                  <p class="text-sm text-[#5BABF2]">Yangi</p>
+                </td>
+                <td class="rounded-r-lg">
+                    <img src="@/assets/images/eye.svg" class="mx-auto" alt="">
+                </td>
+              </tr>
+              <tr class="h-4"></tr>
+            </tbody>
           </table>
 
           <div class="flex justify-between items-center">
