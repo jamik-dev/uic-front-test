@@ -1,4 +1,5 @@
 <template>
-  <h1>AuthLayout</h1>
-  <router-view></router-view>
+  <section class="bg-[#F5F5F7]">
+    <router-view></router-view>
+  </section>
 </template>

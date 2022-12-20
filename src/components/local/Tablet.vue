@@ -72,16 +72,16 @@
             <div class="flex space-x-6">
               <div class="flex space-x-4 items-center">
                 <p class="font-rubik text-[#1D1D1F]">Ko‘rsatish</p>
-                <div class="centering bg-[#fff] pagination-button h-8 w-14">10 <img class="ml-2" src="images/bottom-arrow.svg" alt=""></div>
+                <div class="centering bg-[#fff] pagination-button h-8 w-14">10 <img class="ml-2" src="@/assets/images/bottom-arrow.svg" alt=""></div>
               </div>
               <div class="flex space-x-4 font-rubik">
-                <div class="centering h-8 w-8 rounded-md bg-[#DFE3E8]"><img src="images/left-arrow.svg" alt=""></div>
+                <div class="centering h-8 w-8 rounded-md bg-[#DFE3E8]"><img src="@/assets/images/left-arrow.svg" alt=""></div>
                 <div class="centering pagination-button h-8 w-8">1</div>
                 <div class="centering pagination-button h-8 w-8">2</div>
                 <div class="centering pagination-button h-8 w-8">...</div>
                 <div class="centering pagination-button h-8 w-8">9</div>
                 <div class="centering pagination-button h-8 w-8">10</div>
-                <div class="centering bg-[#fff] h-8 w-8 rounded-md border border-[#DFE3E8]"><img src="images/right-arrow.svg" alt=""></div>
+                <div class="centering bg-[#fff] h-8 w-8 rounded-md border border-[#DFE3E8]"><img src="@/assets/images/right-arrow.svg" alt=""></div>
               </div>
             </div>
           </div>
