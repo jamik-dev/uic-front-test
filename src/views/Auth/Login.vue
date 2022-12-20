@@ -11,18 +11,18 @@
           <h3 class="font-bold text-[#28293D] text-left text-2xl">Kirish</h3>
 
           <!-- Form -->
-          <form @submit.prevent="submit" class="mt-[44px] text-left space-y-[22px]">
-            <div class="space-y-[22px]">
-              <div>
-                <label
+            <form @submit.prevent="submit" class="mt-[44px] text-left space-y-[22px]">
+              <div class="space-y-[22px]">
+                <div>
+                  <label
                   for="login"
                   >LOGIN</label
                 >
                 <input
-                  id="login"
-                  autocomplete="off"
-                  type="text"
-                  class="text-placeholder login-input"
+                id="login"
+                autocomplete="off"
+                type="text"
+                class="text-placeholder login-input"
                   placeholder="Enter Email..."
                   v-model.trim="username"
                 />
@@ -38,17 +38,17 @@
                   class="text-[#2E384D] tracking-wider login-input"
                   placeholder="Enter Password..."
                   v-model.trim="password"
-                />
+                  />
+                </div>
               </div>
-            </div>
-            <div class="space-y-[22px] mt-[22.5px]">
+              <div class="space-y-[22px] mt-[22.5px]">
                 <vue-recaptcha sitekey="Your key here"></vue-recaptcha>
                 <button
-                  type="submit"
-                  class="bg-[#2E5BFF] rounded-lg block text-center text-[#fff] w-full px-[103px] py-[14px] font-semibold text-md font-rubik"
+                type="submit"
+                class="bg-[#2E5BFF] rounded-lg block text-center text-[#fff] w-full px-[103px] py-[14px] font-semibold text-md font-rubik"
                 >
-                  Kirish
-            </button>
+                Kirish
+              </button>
             </div>
           </form>
         </div>

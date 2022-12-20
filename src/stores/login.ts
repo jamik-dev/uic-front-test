@@ -15,7 +15,7 @@ export const useAuthLogin = defineStore('login', () => {
       .then(res => {
         if(res?.status === 200) {
           user.value = res.data.access
-          console.log(res.data)
+          console.log(res)
           localStorage.setItem('user', JSON.stringify(user.value))
         }
       })

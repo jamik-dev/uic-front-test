@@ -17,7 +17,7 @@
                 <th scope="col" class="py-3 px-6">Amallar</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody v-for="list in props.ushla">
               <tr
                 tabindex="0"
                 class="bg-[#fff] text-center h-16"
@@ -26,83 +26,36 @@
                   <p
                     class="text-base font-medium"
                   >
-                    1
+                    {{ list.id }}
                   </p>
                 </td>
                 <td>
                   <p
                     class="text-base font-medium"
                   >
-                    Alimov Abror Xabibullayevich
+                    {{ list.full_name }}
                   </p>
                 </td>
                 <td>
                   <p class="text-sm">
-                    +99899 973-72-60
+                    {{ list.phone }}
                   </p>
                 </td>
                 <td>
                   <p class="text-sm font-bold">
-                    30 000 000 <span class="font-medium text-[#B2B7C1]">UZS</span>
+                    {{ list.sum }} <span class="font-medium text-[#B2B7C1]">UZS</span>
                   </p>
                 </td>
                 <td>
-                  <p class="text-sm font-bold">0 <span class="font-medium text-[#B2B7C1]">UZS</span></p>
+                  <p class="text-sm font-bold">{{ list.spent }} <span class="font-medium text-[#B2B7C1]">UZS</span></p>
                 </td>
                 <td>
                   <p class="text-sm">
-                    15.01.2021
+                    {{list.created_at}}
                   </p>
                 </td>
                 <td>
-                  <p class="text-sm text-[#5BABF2]">Yangi</p>
-                </td>
-                <td class="rounded-r-lg">
-                    <img src="@/assets/images/eye.svg" class="mx-auto" alt="">
-                </td>
-              </tr>
-              <tr class="h-4"></tr>
-            </tbody>
-
-            <tbody>
-              <tr
-                tabindex="0"
-                class="bg-[#fff] text-center h-16"
-              >
-                <td class="rounded-l-lg">
-                  <p
-                    class="text-base font-medium"
-                  >
-                    1
-                  </p>
-                </td>
-                <td>
-                  <p
-                    class="text-base font-medium"
-                  >
-                    Alimov Abror Xabibullayevich
-                  </p>
-                </td>
-                <td>
-                  <p class="text-sm">
-                    +99899 973-72-60
-                  </p>
-                </td>
-                <td>
-                  <p class="text-sm font-bold">
-                    30 000 000 <span class="font-medium text-[#B2B7C1]">UZS</span>
-                  </p>
-                </td>
-                <td>
-                  <p class="text-sm font-bold">0 <span class="font-medium text-[#B2B7C1]">UZS</span></p>
-                </td>
-                <td>
-                  <p class="text-sm">
-                    15.01.2021
-                  </p>
-                </td>
-                <td>
-                  <p class="text-sm text-[#5BABF2]">Yangi</p>
+                  <p class="text-sm text-[#5BABF2]">{{ list.get_status_display }}</p>
                 </td>
                 <td class="rounded-r-lg">
                     <img src="@/assets/images/eye.svg" class="mx-auto" alt="">
@@ -137,6 +90,13 @@
 </template>
 
 <script lang="ts" setup>
+const props = defineProps({
+  ushla: {
+    required: true,
+    type: null
+  }
+})
+
 </script>
 
 <style>
