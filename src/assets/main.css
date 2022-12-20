@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  th {
+    @apply text-xs font-bold tracking-wider font-rubik text-[#B1B1B8] uppercase;
+  }
+  label {
+    @apply text-xs text-[#1D1D1F] font-semibold font-rubik leading-4 tracking-wider;
+  }
+}
+
+.login-input {
+  @apply outline-0 mt-2 py-2 px-3 w-full bg-inputBack border border-[#E0E7FF] rounded-[6px] placeholder:text-sm placeholder:tracking-wide placeholder:font-medium placeholder:font-rubik;
+}
+
+.centering {
+  @apply flex items-center justify-center;
+}
+.pagination-button {
+  @apply duration-200 bg-[#fff] text-[#000] rounded-md border border-[#DFE3E8] font-semibold cursor-pointer hover:border-[#3366FF] hover:text-[#3366FF];
+}

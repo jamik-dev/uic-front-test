@@ -1,4 +1,8 @@
 <template>
-  <h1 class="bg-green-300">DefaultLayout</h1>
+  <Navbar />
   <router-view></router-view>
 </template>
+
+<script lang="ts" setup>
+import Navbar from "@/components/global/Navbar.vue"
+</script>
