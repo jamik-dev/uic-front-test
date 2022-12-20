@@ -3,7 +3,6 @@ import { defineStore } from 'pinia'
 import { API_AUTH_LOGIN } from '@/api/Auth/AuthLogin'
 import type Login from '@/types/Interfaces'
 
-
 export const useAuthLogin = defineStore('login', () => {
   const user = ref(null)
 
@@ -16,9 +15,17 @@ export const useAuthLogin = defineStore('login', () => {
       .then(res => {
         if(res?.status === 200) {
           user.value = res.data.access
+          console.log(res.data)
+          localStorage.setItem('user', JSON.stringify(user.value))
         }
       })
   }
 
-  return { login, doubleCount }
+  async function logout() {
+    localStorage.removeItem('user');
+    user.value = null;
+
+  }
+
+  return { login, logout, doubleCount }
 })

@@ -70,12 +70,12 @@ const router = useRouter();
 const authLogin = useAuthLogin();
 
 async function submit() {
-  const response = authLogin.login(login);
-  console.log(response)
+  authLogin.login(login);
   if (authLogin.doubleCount.value) {
     router.push('/sponsors')
   }
 }
+
 
 </script>
 

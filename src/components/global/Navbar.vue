@@ -15,9 +15,9 @@
             </span>
           </div>
         </div>
-        <router-link to="/login">
+        <button @click="logout">
           <img src="@/assets/images/logout.svg" class="cursor-pointer" alt="" />
-        </router-link>
+        </button>
       </div>
     </div>
   </header>
@@ -25,6 +25,16 @@
 </template>
 
 <script lang="ts" setup>
+import { useAuthLogin } from '@/stores/login';
+import {useRouter} from 'vue-router'
+
+const router = useRouter()
+const authLogin = useAuthLogin()
+async function logout() {
+  authLogin.logout();
+  router.push('/login');
+}
+
 </script>
 
 <style>
