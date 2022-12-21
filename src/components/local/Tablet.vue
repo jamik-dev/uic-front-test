@@ -17,52 +17,7 @@
                 <th scope="col" class="py-3 px-6">Amallar</th>
               </tr>
             </thead>
-            <tbody v-for="list in props.ushla">
-              <tr
-                tabindex="0"
-                class="bg-[#fff] text-center h-16"
-              >
-                <td class="rounded-l-lg">
-                  <p
-                    class="text-base font-medium"
-                  >
-                    {{ list.id }}
-                  </p>
-                </td>
-                <td>
-                  <p
-                    class="text-base font-medium"
-                  >
-                    {{ list.full_name }}
-                  </p>
-                </td>
-                <td>
-                  <p class="text-sm">
-                    {{ list.phone }}
-                  </p>
-                </td>
-                <td>
-                  <p class="text-sm font-bold">
-                    {{ list.sum }} <span class="font-medium text-[#B2B7C1]">UZS</span>
-                  </p>
-                </td>
-                <td>
-                  <p class="text-sm font-bold">{{ list.spent }} <span class="font-medium text-[#B2B7C1]">UZS</span></p>
-                </td>
-                <td>
-                  <p class="text-sm">
-                    {{list.created_at}}
-                  </p>
-                </td>
-                <td>
-                  <p class="text-sm text-[#5BABF2]">{{ list.get_status_display }}</p>
-                </td>
-                <td class="rounded-r-lg">
-                    <img src="@/assets/images/eye.svg" class="mx-auto" alt="">
-                </td>
-              </tr>
-              <tr class="h-4"></tr>
-            </tbody>
+            <TableList v-for="list in props.ushla" :list="list" />
           </table>
 
           <div class="flex justify-between items-center">
@@ -90,12 +45,15 @@
 </template>
 
 <script lang="ts" setup>
+import TableList from "./TableList.vue"
 const props = defineProps({
   ushla: {
     required: true,
     type: null
   }
 })
+
+
 
 </script>
 
