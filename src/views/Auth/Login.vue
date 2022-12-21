@@ -69,7 +69,7 @@ const {username, password} = toRefs(login);
 const router = useRouter();
 const authLogin = useAuthLogin();
 
-async function submit() {
+function submit() {
   authLogin.login(login);
   if (authLogin.doubleCount.value) {
     router.push('/sponsors')
