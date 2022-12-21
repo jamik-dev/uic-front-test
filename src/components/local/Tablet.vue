@@ -1,7 +1,6 @@
 <template>
       <div class="py-12">
         <div class="w-[85%] mx-auto">
-          
           <table
             class="table w-full"
           >

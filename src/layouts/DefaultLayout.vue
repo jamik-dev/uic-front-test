@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#F5F5F7] min-h-screen">
+  <section class="bg-[#F5F5F7] min-h-screen relative">
     <Navbar />
     <router-view v-slot="slotProps">
       <transition name="route" mode="out-in">
