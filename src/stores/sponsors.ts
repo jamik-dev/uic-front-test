@@ -6,7 +6,7 @@ import type Sponsors from '@/types/Sponsors'
 
 export const useHomeSponsorsList = defineStore('sponsors', () => {
   const sponsorsList = ref(null)
-  const sponsorsCount = ref(null)
+  const sponsorsCount = ref<number>(0)
   const sponsorsNext = ref(null)
   const sponsorsPrevious = ref(null)
 
@@ -34,5 +34,5 @@ export const useHomeSponsorsList = defineStore('sponsors', () => {
         console.log(err);
       })
   }
-  return { sponsors, doubleCount, sponsorsList }
+  return { sponsors, doubleCount, sponsorsList, sponsorsCount }
 })

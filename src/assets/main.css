@@ -19,11 +19,15 @@
   @apply flex items-center justify-center;
 }
 .pagination-button {
-  @apply duration-200 bg-[#fff] text-[#000] rounded-md border border-[#DFE3E8] font-semibold cursor-pointer hover:border-[#3366FF] hover:text-[#3366FF];
+  @apply duration-200 bg-[#fff] text-[#000] rounded-md border border-[#DFE3E8] font-semibold cursor-pointer;
 }
 
 .router-link-active{
   @apply border-[#3366FF] text-[#fff] bg-[#3366FF];
+}
+
+.activeClass {
+  @apply border-[#3366FF] text-[#3366FF];
 }
 
 *::-webkit-scrollbar,

@@ -1,6 +1,6 @@
 <template>
   <section id="sponsors">
-    <Tablet  v-if="sponsorsList.sponsorsList" :ushla="sponsorsList.sponsorsList" />
+    <Tablet  v-if="sponsorsList.sponsorsList" />
     <div v-if="!sponsorsList.sponsorsList" class="flex items-center justify-center vue-loader">
       <vue-loaders-ball-pulse color="#5BABF2" scale="2" />
     </div>
