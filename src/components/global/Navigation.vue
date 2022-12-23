@@ -2,18 +2,21 @@
   <div class="z-[-1] flex items-center py-6 bg-[#fff]">
     <div class="flex flex-row mx-auto justify-between w-[85%]">
       <div class="flex">
-        <div
-          class="border-2 rounded-l-lg border-[#E0E7FF] py-[12px] px-12 text-pro font-semibold text-sm tracking-wider text-filterColor">
+        <router-link
+        to="/dashboard"
+          class="border-2 duration-200 rounded-l-lg border-[#E0E7FF] py-[12px] px-12 text-pro font-semibold text-sm tracking-wider text-filterColor">
           DASHBOARD
-        </div>
-        <div
-          class="border-y-2 border-[#3366FF] py-[12px] px-12 text-pro font-semibold text-sm tracking-wider text-[#fff] bg-[#3366FF]">
+      </router-link>
+        <router-link
+        to="/sponsors"
+          class="border-y-2 duration-200 border-[#E0E7FF] py-[12px] px-12 text-pro font-semibold text-sm tracking-wider text-filterColor">
           HOMIYLAR
-        </div>
-        <div
-          class="border-2 rounded-r-lg border-[#E0E7FF] py-[12px] px-12  font-semibold text-sm tracking-wider text-filterColor">
+    </router-link>
+        <router-link
+        to="/students"
+          class="border-2 duration-200 rounded-r-lg border-[#E0E7FF] py-[12px] px-12  font-semibold text-sm tracking-wider text-filterColor">
           TALABALAR
-        </div>
+        </router-link>
       </div>
       <div class="flex space-x-10">
         <div class="flex bg-[#E8E8E8] rounded-lg justify-center items-center">

@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-import Navigation from "@/components/local/Navigation.vue"
+import Navigation from "@/components/global/Navigation.vue"
 import Navbar from "@/components/global/Navbar.vue"
 </script>
 

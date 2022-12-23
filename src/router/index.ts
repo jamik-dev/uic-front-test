@@ -18,6 +18,18 @@ const router = createRouter({
           name: 'sponsors',
           component: () => import('../views/Home/Sponsors.vue'),
           meta: {requiresAuth: true}
+        },
+        {
+          path: '/students',
+          name: 'students',
+          component: () => import('../views/Home/Students.vue'),
+          meta: {requiresAuth: true}
+        },
+        {
+          path: '/dashboard',
+          name: 'dashboard',
+          component: () => import('../views/Home/Dashboard.vue'),
+          meta: {requiresAuth: true}
         }
       ]
     },

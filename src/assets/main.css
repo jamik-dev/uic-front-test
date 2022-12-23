@@ -21,3 +21,21 @@
 .pagination-button {
   @apply duration-200 bg-[#fff] text-[#000] rounded-md border border-[#DFE3E8] font-semibold cursor-pointer hover:border-[#3366FF] hover:text-[#3366FF];
 }
+
+.router-link-active{
+  @apply border-[#3366FF] text-[#fff] bg-[#3366FF];
+}
+
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb {
+  width: 10px;
+  border-radius: 10px;
+  background: #000;
+  color: #3366FF;
+  background-clip: padding-box;
+  border: 3px solid transparent;
+}
+
+*::-webkit-scrollbar-thumb {        
+  box-shadow: inset 0 0 0 10px;
+}

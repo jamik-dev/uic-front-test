@@ -11,7 +11,7 @@
 import Tablet from "@/components/local/Tablet.vue"
 import { useHomeSponsorsList } from "@/stores/sponsors";
 import type Sponsors from "@/types/Sponsors";
-import {reactive, ref} from 'vue'
+import {reactive} from 'vue'
 
 
 const sponsorsList = useHomeSponsorsList()
