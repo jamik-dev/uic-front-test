@@ -1,6 +1,5 @@
 <template>
   <section id="sponsors">
-    <Navigation />
     <Tablet  v-if="sponsorsList.sponsorsList" :ushla="sponsorsList.sponsorsList" />
     <div v-if="!sponsorsList.sponsorsList" class="flex items-center justify-center vue-loader">
       <vue-loaders-ball-pulse color="#5BABF2" scale="2" />
@@ -9,7 +8,6 @@
 </template>
 
 <script lang="ts" setup>
-import Navigation from "@/components/local/Navigation.vue"
 import Tablet from "@/components/local/Tablet.vue"
 import { useHomeSponsorsList } from "@/stores/sponsors";
 import type Sponsors from "@/types/Sponsors";
@@ -18,8 +16,8 @@ import {reactive, ref} from 'vue'
 
 const sponsorsList = useHomeSponsorsList()
 const pagination = reactive<Sponsors>({
-  page: 1,
-  page_size: 10,
+  page: 11,
+  page_size: 5,
   search: '',
   ordering: ''
 })
