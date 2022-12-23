@@ -16,10 +16,14 @@
 }
 
 .centering {
-  @apply flex items-center justify-center;
+  @apply flex items-center justify-center cursor-pointer;
 }
 .pagination-button {
   @apply duration-200 bg-[#fff] text-[#000] rounded-md border border-[#DFE3E8] font-semibold cursor-pointer;
+}
+
+.pagination-common {
+  @apply centering pagination-button h-8 w-8;
 }
 
 .router-link-active{

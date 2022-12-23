@@ -16,8 +16,8 @@ import {reactive} from 'vue'
 
 const sponsorsList = useHomeSponsorsList()
 const pagination = reactive<Sponsors>({
-  page: 11,
-  page_size: 5,
+  page: 1,
+  page_size: 10,
   search: '',
   ordering: ''
 })

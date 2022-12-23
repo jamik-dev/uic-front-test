@@ -3,7 +3,7 @@
     <tr tabindex="0" class="bg-[#fff] text-center h-16">
       <td class="rounded-l-lg">
         <p class="text-base font-medium">
-          {{ list.id }}
+          {{ index }}
         </p>
       </td>
       <td>
@@ -45,6 +45,10 @@ import {computed} from 'vue'
 
 const props = defineProps({
   list: {
+    required: true,
+    type: null
+  },
+  index: {
     required: true,
     type: null
   }

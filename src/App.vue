@@ -9,7 +9,7 @@
   </router-view>
 </template>
 
-<style scoped>
+<style>
 .route-enter-from {
   opacity: 0;
   transform: translateY(-30px);
