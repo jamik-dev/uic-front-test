@@ -43,7 +43,7 @@
                 </div>
               </div>
               <div class="space-y-[22px] mt-[22.5px]">
-                <vue-recaptcha :load-recaptcha-script="true" :sitekey="'6Lf35KEjAAAAAIQP-0GjBBmSTw-GoFi3Yqbta-Z5'"></vue-recaptcha>
+                <vue-recaptcha :load-recaptcha-script="true" :sitekey="'6LcQyaIjAAAAANhBxyxsxcR3jS9cSX_7nc4aOAXz'"></vue-recaptcha>
                 <button
                 type="submit"
                 class="bg-[#2E5BFF] duration-200 rounded-lg block text-center text-[#fff] w-full px-[103px] py-[14px] font-semibold text-md font-rubik flex items-center justify-center"
