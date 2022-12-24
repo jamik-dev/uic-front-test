@@ -15,8 +15,6 @@ export const useHomeSponsorsList = defineStore('sponsors', () => {
     return sponsorsList;
   })
 
-  console.log(doubleCount.value)
-
   async function sponsors({page, page_size, search, ordering}: Sponsors) {
     return API_HOME_SPONSORS_LIST(page, page_size, search, ordering)
       .then(res => {
