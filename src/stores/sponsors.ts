@@ -19,7 +19,6 @@ export const useHomeSponsorsList = defineStore('sponsors', () => {
     return API_HOME_SPONSORS_LIST(page, page_size, search, ordering)
       .then(res => {
         if(res?.status === 200) {
-          console.log(res?.data.results)
           sponsorsList.value = res?.data.results;
           sponsorsCount.value = res?.data.count;
           sponsorsNext.value = res?.data.next;
