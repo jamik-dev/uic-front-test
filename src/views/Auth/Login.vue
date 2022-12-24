@@ -43,7 +43,7 @@
                 </div>
               </div>
               <div class="space-y-[22px] mt-[22.5px]">
-                <vue-recaptcha sitekey="Your key here"></vue-recaptcha>
+                <vue-recaptcha sitekey="https://uic-front-test.vercel.app"></vue-recaptcha>
                 <button
                 type="submit"
                 class="bg-[#2E5BFF] duration-200 rounded-lg block text-center text-[#fff] w-full px-[103px] py-[14px] font-semibold text-md font-rubik flex items-center justify-center"
