@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Students</h1>    
+  <div class="flex justify-center items-center h-80">
+    <h1 class="text-6xl">Students</h1>    
   </div>
 </template>
 

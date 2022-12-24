@@ -66,7 +66,7 @@ const activeClass = (num: number) => {
 }
 
 const lastPage =computed(() => {
-  return Math.floor(sponsors.sponsorsCount/pagination.page_size);
+  return sponsors.sponsorsCount%pagination.page_size !== 0 ? Math.floor(sponsors.sponsorsCount/pagination.page_size) : sponsors.sponsorsCount/pagination.page_size - 1;
 })
 
 const activeClass2 = computed(() => {

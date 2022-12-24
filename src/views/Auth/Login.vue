@@ -3,6 +3,7 @@
         <div class="mb-[48px]">
           <img src="@/assets/images/logo.svg" alt="">
         </div>
+
         <!-- Inner div -->
         <div
           class="mx-auto bg-[#fff] w-90 shadow-lg text-center p-8 border border-[#EBEEFC] rounded-xl"
@@ -45,9 +46,10 @@
                 <vue-recaptcha sitekey="Your key here"></vue-recaptcha>
                 <button
                 type="submit"
-                class="bg-[#2E5BFF] rounded-lg block text-center text-[#fff] w-full px-[103px] py-[14px] font-semibold text-md font-rubik"
+                class="bg-[#2E5BFF] duration-200 rounded-lg block text-center text-[#fff] w-full px-[103px] py-[14px] font-semibold text-md font-rubik flex items-center justify-center"
                 >
                 Kirish
+              <vue-loaders-ball-spin-fade-loader v-if="isLoading" color="#fff" scale="0.4" />
               </button>
             </div>
           </form>
@@ -57,27 +59,60 @@
 
 <script lang="ts" setup>
 import { VueRecaptcha } from 'vue-recaptcha';
-import {reactive, toRefs} from 'vue';
+import {reactive, toRefs, watch, ref} from 'vue';
 import { useRouter } from 'vue-router';
 import {useAuthLogin} from '@/stores/login'
+import { useNotification } from "@kyvg/vue3-notification";
 import type Login from '@/types/Interfaces';
+
 const login = reactive<Login>({
   username: '',
   password: ''
 })
+const { notify } = useNotification()
 const {username, password} = toRefs(login);
 const router = useRouter();
 const authLogin = useAuthLogin();
+const error = ref('')
+const isLoading = ref(false)
 
 function submit() {
-  authLogin.login(login);
-  if (authLogin.doubleCount.value) {
-    router.push('/sponsors')
+  if(login.username && login.password) {
+    isLoading.value = true;
+    authLogin.login(login);
+  } else {
+    notify({
+      title: 'Warning',
+      text: '<b>Iltimos bo\'sh joyni to\'ldiring!</b>',
+      type: 'warn'
+    })
   }
 }
+watch(authLogin.doubleCount, function() {
+  if (authLogin.doubleCount.value) {
+    isLoading.value = false;
+    router.push('/sponsors')
+  } else {
+    isLoading.value = false;
+    router.push('/login')
+  }
+})
 
-
+watch(authLogin.errorMessage, function() {
+  if(authLogin.errorMessage.value) {
+    notify({
+      title: 'Error',
+      text: '<b>'+authLogin.errorMessage.value+'</b>',
+      type: 'error'
+    })
+    isLoading.value = false;
+  }
+})
 </script>
 
-<style>
+<style scoped>
+.vue-loaders.ball-spin-fade-loader{
+  border-width: 5px;
+  margin-left: 10px;
+}
 </style>

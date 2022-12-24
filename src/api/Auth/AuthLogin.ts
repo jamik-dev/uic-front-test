@@ -5,7 +5,4 @@ export const API_AUTH_LOGIN = async (username: string, password: string) => {
     .then(response => {
       return response;
     })
-    .catch(err => {
-      console.log(err);
-    })
 }

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Dashboard</h1>    
+  <div class="flex justify-center items-center h-80">
+    <h1 class="text-6xl">Dashboard</h1>    
   </div>
 </template>
 
