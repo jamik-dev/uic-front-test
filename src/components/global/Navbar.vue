@@ -3,10 +3,10 @@
     <div class="flex flex-row mx-auto justify-between align-center w-[85%]">
       <img src="@/assets/images/logo-pro.svg" alt="" />
       <div class="flex justify-between space-x-10 items-center">
-        <div class="flex flex-row bg-grey-400 rounded-lg h-auto w-[120px] bg-[#F1F1F3] p-1">
+        <div class="flex  bg-grey-400 space-x-2 rounded-lg h-auto bg-[#F1F1F3] p-1">
           <div class="flex items-center justify-center w-2/3">
             <p class="font-pro font-semibold text-sm text-[#28293D]">
-              Shohrux
+              Sherbek
             </p>
           </div>
           <div class="w-1/3 centering">

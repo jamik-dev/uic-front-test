@@ -4,7 +4,7 @@
           <table
             class="table w-full"
           >
-            <thead class="bg-gray-800 text-gray-500">
+            <thead class="text-gray-500">
               <tr>
                 <th scope="col" class="py-3 px-6">#</th>
                 <th scope="col" class="py-3 px-6">f.i.sh.</th>

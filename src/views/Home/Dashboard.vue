@@ -1,10 +1,24 @@
 <template>
-  <div class="flex justify-center items-center h-80">
-    <h1 class="text-6xl">Dashboard</h1>    
+  <div class="mt-12 w-[85%] mx-auto">
+    <div class="flex space-x-7">
+      <DashboardMoney :quantity="formatter(dashboard.dashboardSumma.total_paid)" :img="'money-blue.svg'" :title="'Jami to‘langan summa'" />
+      <DashboardMoney :quantity="formatter(dashboard.dashboardSumma.total_need)" :img="'money-yellow.svg'" :title="'Jami so‘ralgan summa'" />
+      <DashboardMoney :quantity="formatter(dashboard.dashboardSumma.total_must_pay)" :img="'money-orange.svg'" :title="'To‘lanishi kerak summa'" />
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+import DashboardMoney from '@/components/local/DashboardMoney.vue';
+import { useDashboard } from '@/stores/dashboard';
+
+const dashboard = useDashboard();
+dashboard.dashboard_quantity();
+
+function formatter(num: Number) {
+  return num.toLocaleString('fr-Fr');
+}
+
 </script>
 
 <style scoped>
