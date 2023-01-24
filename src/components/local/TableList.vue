@@ -1,6 +1,6 @@
 <template>
   <tbody>
-    <tr tabindex="0" class="bg-[#fff] text-center h-16">
+    <tr tabindex="0" class="outline-none bg-[#fff] text-center h-16">
       <td class="rounded-l-lg">
         <p class="text-base font-medium">
           {{ index }}
