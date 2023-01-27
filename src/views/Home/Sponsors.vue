@@ -9,12 +9,12 @@
 
 <script lang="ts" setup>
 import Tablet from "@/components/local/Tablet.vue"
-import { useHomeSponsorsList } from "@/stores/sponsors";
+import { useSponsors } from "@/stores/sponsors";
 import type Sponsors from "@/types/Sponsors";
 import {reactive} from 'vue'
 
 
-const sponsorsList = useHomeSponsorsList()
+const sponsorsList = useSponsors()
 const pagination = reactive<Sponsors>({
   page: 1,
   page_size: 10,
