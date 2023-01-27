@@ -56,15 +56,17 @@ const router = createRouter({
 })
 
 router.beforeEach((to, _, next) => {
+  const loggedIn = localStorage.getItem('user')
   if (to.matched.some((record) => record.meta.requiresAuth)) {
-    const loggedIn = localStorage.getItem('user')
     if (loggedIn) {
       next()
     } else {
       router.push({ name: 'login' })
     }
+  } else if(loggedIn && to.path === '/login') {
+    router.push({name: 'home'})
   } else {
-    next()
+    next();
   }
 })
 

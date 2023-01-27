@@ -50,10 +50,10 @@
 
 <script lang="ts" setup>
 import TableList from "./TableList.vue"
-import { useHomeSponsorsList } from "@/stores/sponsors";
+import { useSponsors } from "@/stores/sponsors";
 import type Sponsors from "@/types/Sponsors";
 import {reactive, ref, watch, computed} from 'vue'
-const sponsors = useHomeSponsorsList()
+const sponsors = useSponsors()
 
 const pagination = reactive<Sponsors>({
   page: 1,

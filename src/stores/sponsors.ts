@@ -4,17 +4,22 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import type Sponsors from '@/types/Sponsors'
 
-export const useHomeSponsorsList = defineStore('sponsors', () => {
+export const useSponsors = defineStore('sponsors', () => {
   const sponsorsList = ref(null)
   const sponsorsCount = ref<number>(0)
   const sponsorsNext = ref(null)
   const sponsorsPrevious = ref(null)
 
+  const filterModal = ref<Boolean>(false)
 
   const doubleCount = computed(() => {
     return sponsorsList;
   })
-
+  
+  function filterTrigger(bool: Boolean) {
+    filterModal.value = bool;
+  }
+  
   async function sponsors({page, page_size, search, ordering}: Sponsors) {
     return API_HOME_SPONSORS_LIST(page, page_size, search, ordering)
       .then(res => {
@@ -31,5 +36,5 @@ export const useHomeSponsorsList = defineStore('sponsors', () => {
         console.log(err);
       })
   }
-  return { sponsors, doubleCount, sponsorsList, sponsorsCount }
+  return { sponsors, filterModal, filterTrigger, doubleCount, sponsorsList, sponsorsCount }
 })

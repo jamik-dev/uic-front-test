@@ -25,7 +25,7 @@
             class="py-3 pr-3 pl-1 rounded-r-lg w-full outline-0 bg-[#E8E8E8] text-[#B1B1B8] placeholder:text-[#B1B1B8] text-pro placeholder:text-pro"
             placeholder="Izlash" />
         </div>
-        <div class="centering p-3 rounded-lg bg-[#EDF1FD] text-[#3365FC] space-x-2 px-8">
+        <div @click="sponsors.filterTrigger(true)" class="centering p-3 rounded-lg bg-[#EDF1FD] text-[#3365FC] space-x-2 px-8">
           <span><img src="@/assets/images/filter.svg" alt="" /></span>
           <p class="font-pro text-md">Filter</p>
         </div>
@@ -35,6 +35,11 @@
 </template>
 
 <script lang="ts" setup>
+import { useSponsors } from "@/stores/sponsors";
+
+const sponsors = useSponsors();
+
+
 </script>
 
 <style scoped>
