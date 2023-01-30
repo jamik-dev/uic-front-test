@@ -1,5 +1,6 @@
 <template>
-  <dialog open class="flex w-full z-10 fixed bg-transparent h-screen items-center bg-[#0b0b0bd1] justify-center  backdrop-blur-[4px]">
+  <dialog open
+    class="flex w-full z-20 fixed bg-transparent h-screen items-center bg-[#0b0b0bd1] justify-center  backdrop-blur-[4px]">
     <div @click="sponsors.filterTrigger(false)" class="absolute w-full h-full"></div>
     <div class="flex flex-col z-10 w-[55%] space-y-7 rounded-lg bg-white py-7 px-8">
       <div class="flex justify-between w-full">
@@ -7,17 +8,6 @@
         <img @click="sponsors.filterTrigger(false)" class="cursor-pointer" src="@/assets/images/cross.svg" alt="">
       </div>
       <div class="h-[2px] w-full bg-[#F5F5F7]"></div>
-      <!-- <div class="">
-        <label for="default" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Default select</label>
-        <select id="default"
-          class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-          <option selected>Choose a country</option>
-          <option value="US">United States</option>
-          <option value="CA">Canada</option>
-          <option value="FR">France</option>
-          <option value="DE">Germany</option>
-        </select>
-      </div> -->
       <div>
         <p class="uppercase font-rubik text-[12px] text-[#1D1D1F] tracking-wider font-semibold">Ariza Holati</p>
         <div class="relative mt-1">
@@ -79,7 +69,8 @@
       <div>
         <p class="uppercase font-rubik text-[12px] text-[#1D1D1F] tracking-wider font-semibold">Sana</p>
         <div class="flex w-1/2 relative">
-          <input v-model="inputValue" v-maska data-maska="##.##.#### - ##.##.####" @focus="focused = true" @blur="focused = false"
+          <input v-model="inputValue" v-maska data-maska="##.##.#### - ##.##.####" @focus="focused = true"
+            @blur="focused = false"
             class="w-full border-2 py-2 px-3 rounded-lg text-gray-500 bg-[#F9FAFF] font-rubik focus:outline-none focus:border-[#2E5BFF]"
             placeholder="kk.oo.yyyy - kk.oo.yyyy" type="text" name="" id="">
           <span class="absolute block top-[10px] right-3">
@@ -101,7 +92,8 @@
       <div class="h-[2px] w-full bg-[#F5F5F7]"></div>
 
       <div class="flex space-x-3 justify-end items-center">
-        <button @click="cleanForm" :class="{'border-[#2E5BFF]' : cleanAll2}" class="px-6 py-2 space-x-1 border-2 rounded-lg flex justify-center items-center">
+        <button @click="cleanForm" :class="{ 'border-[#2E5BFF]': cleanAll2 }"
+          class="px-6 py-2 space-x-1 border-2 rounded-lg flex justify-center items-center">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M19.6449 10.0046C19.387 9.88988 16.972 8.81484 16.7132 8.7001C15.4988 8.1595 14.0765 8.70626 13.5366 9.91991L20.8647 13.1812C21.4053 11.9668 20.8586 10.5445 19.6449 10.0046ZM21.4161 2.07737C21.0111 1.89717 20.5806 1.94337 20.4489 2.19057L16.9403 8.80104L19.3076 9.85375L21.9798 2.87132C22.0753 2.60795 21.8212 2.25757 21.4161 2.07737Z"
@@ -122,9 +114,10 @@
               d="M4.25179 11.1432C4.42695 10.968 4.66451 10.8696 4.91223 10.8696C5.15994 10.8696 5.39751 10.968 5.57266 11.1432C5.74782 11.3183 5.84623 11.5559 5.84623 11.8036C5.84623 12.0513 5.74782 12.2889 5.57266 12.464C5.39751 12.6392 5.15994 12.7376 4.91223 12.7376C4.66451 12.7376 4.42695 12.6392 4.25179 12.464C4.07663 12.2889 3.97822 12.0513 3.97822 11.8036C3.97822 11.5559 4.07663 11.3183 4.25179 11.1432Z"
               :fill="cleanAll" />
           </svg>
-          <p :class="{'text-[#2E5BFF]' : cleanAll2}" class="text-[#B2B7C1] font-rubik">Tozalash</p>
+          <p :class="{ 'text-[#2E5BFF]': cleanAll2 }" class="text-[#B2B7C1] font-rubik">Tozalash</p>
         </button>
-        <button class="px-5 py-2 bg-[#3366FF] space-x-1 border-2 border-[#3366FF] rounded-lg flex justify-center items-center">
+        <button
+          class="px-5 py-2 bg-[#3366FF] space-x-1 border-2 border-[#3366FF] rounded-lg flex justify-center items-center">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M2 12C2 12 5.63636 4.72729 12 4.72729C18.3636 4.72729 22 12 22 12C22 12 18.3636 19.2727 12 19.2727C5.63636 19.2727 2 12 2 12Z"

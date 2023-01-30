@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-
+import { useSponsors } from '@/stores/sponsors'
 import DefaultLayout from '../layouts/DefaultLayout.vue'
 import AuthLayout from '../layouts/AuthLayout.vue'
 import NotFound from '../views/NotFound/NotFound.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,6 +18,13 @@ const router = createRouter({
           path: '/sponsors',
           name: 'sponsors',
           component: () => import('../views/Home/Sponsors.vue'),
+          meta: {requiresAuth: true}
+        },
+        {
+          props: true,
+          path: '/sponsors/:id',
+          name: 'singleSponsor',
+          component: () => import('../views/Home/SponsorsSingle.vue'),
           meta: {requiresAuth: true}
         },
         {
@@ -50,12 +58,21 @@ const router = createRouter({
     {
       path: '/:notFound(.*)',
       name: 'notfound',
-      component: NotFound
+      component: NotFound,
+      meta: {requiresAuth: false}
     }
   ]
 })
 
 router.beforeEach((to, _, next) => {
+  const sponsors = useSponsors();
+  if (to.path.includes('/sponsors/')) {
+    sponsors.navigationTrigger(false);
+    sponsors.sponsorsSingle(Number(to.path.slice(10, to.path.length)))
+    window.scrollTo(0,0);
+  } else {
+    sponsors.navigationTrigger(true);
+  }
   const loggedIn = localStorage.getItem('user')
   if (to.matched.some((record) => record.meta.requiresAuth)) {
     if (loggedIn) {
