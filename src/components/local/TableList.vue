@@ -33,7 +33,7 @@
         <p class="text-sm" :class="moderateColor">{{ list.get_status_display }}</p>
       </td>
       <td class="rounded-r-lg">
-        <img src="@/assets/images/eye.svg" class="mx-auto" alt="">
+        <router-link :to="'/sponsors/'+props.list.id"><img class="cursor-pointer mx-auto" src="@/assets/images/eye.svg" alt=""></router-link>
       </td>
     </tr>
     <tr class="h-4"></tr>
@@ -42,6 +42,9 @@
 
 <script lang="ts" setup>
 import {computed} from 'vue'
+import { useSponsors } from '@/stores/sponsors';
+
+const sponsors = useSponsors();
 
 const props = defineProps({
   list: {
@@ -53,6 +56,7 @@ const props = defineProps({
     type: null
   }
 })
+
 const moderateColor = computed(() => {
   if(props.list.get_status_display == 'Yangi') {
     return 'text-[#5BABF2]'

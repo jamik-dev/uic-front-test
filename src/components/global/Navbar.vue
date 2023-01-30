@@ -1,5 +1,5 @@
 <template>
-  <header class="w-full h-16 py-3 sticky top-0 flex items-center bg-[#fff] shadow-lg">
+  <header class="w-full h-16 py-3 sticky z-10 top-0 flex items-center bg-[#fff] shadow-lg">
     <div class="flex flex-row mx-auto justify-between align-center w-[85%]">
       <img src="@/assets/images/logo-pro.svg" alt="" />
       <div class="flex justify-between space-x-10 items-center">

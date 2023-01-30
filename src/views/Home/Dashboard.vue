@@ -15,13 +15,14 @@
 import DashboardMoney from '@/components/local/DashboardMoney.vue';
 import LineChart from '@/components/local/LineChart.vue';
 import { useDashboard } from '@/stores/dashboard';
-
 const dashboard = useDashboard();
+
 dashboard.dashboard_quantity();
 
 function formatter(num: Number) {
   return num.toLocaleString('fr-Fr');
 }
+
 
 </script>
 

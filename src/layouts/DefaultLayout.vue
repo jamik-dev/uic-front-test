@@ -4,7 +4,8 @@
       <SponsorsFilter v-if="sponsors.filterModal" />
     </transition>
     <Navbar />
-    <Navigation />
+    <Navigation v-if="sponsors.navigation" />
+    <NavigationSponsor v-else />
     <router-view v-slot="slotProps">
       <transition name="route" mode="out-in">
         <keep-alive>
@@ -16,8 +17,9 @@
 </template>
 
 <script lang="ts" setup>
-import Navigation from "@/components/global/Navigation.vue"
-import Navbar from "@/components/global/Navbar.vue"
+import Navigation from "@/components/global/Navigation.vue";
+import NavigationSponsor from '@/components/local/NavigationSponsor.vue';
+import Navbar from "@/components/global/Navbar.vue";
 import SponsorsFilter from "@/components/local/SponsorsFilter.vue";
 import { useSponsors } from "@/stores/sponsors";
 
@@ -26,15 +28,18 @@ const sponsors = useSponsors();
 </script>
 
 <style>
-.fade-enter-from, .fade-leave-to {
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
 }
 
-.fade-enter-to, .fade-leave-from {
+.fade-enter-to,
+.fade-leave-from {
   opacity: 1;
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.3s ease; 
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
 }
 </style>
