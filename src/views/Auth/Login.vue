@@ -15,7 +15,7 @@
           <div>
             <label for="login">LOGIN</label>
             <input id="login" autocomplete="off" type="text" class="text-placeholder login-input"
-              placeholder="Enter Email..." v-model.trim="username" />
+              placeholder="Enter Username..." v-model.trim="username" />
           </div>
           <div>
             <label for="password">PAROL</label>

@@ -14,7 +14,6 @@ import { useSponsors } from '@/stores/sponsors';
 import {computed} from "vue";
 const sponsors = useSponsors();
 
-console.log(sponsors.data)
 
 const moderateColor = computed(() => {
   if(sponsors.data.get_status_display == 'Yangi') {
@@ -27,7 +26,6 @@ const moderateColor = computed(() => {
     return 'text-[#979797] bg-[#9797971a]'
   }
 })
-console.log(sponsors.data.get_status_display)
 </script>
 
 <style scoped>
