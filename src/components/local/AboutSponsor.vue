@@ -2,7 +2,7 @@
   <div class="w-full bg-white rounded-lg flex flex-col space-y-8 py-6 px-8 shadow-lg">
     <div class="flex justify-between items-center">
       <h1 class="font-rubik text-2xl font-semibold">Homiy haqida</h1>
-      <button class="outline-none px-8 py-3 flex items-center rounded-lg bg-[#EDF1FD] font-rubik text-md text-[#3365FC]"><img class="mr-2" src="../../assets/images/edit.svg" alt=""> Tahrirlash</button>
+      <button @click="sponsors.editModalTrigger(true)" class="outline-none px-8 py-3 flex items-center rounded-lg bg-[#EDF1FD] font-rubik text-md text-[#3365FC]"><img class="mr-2" src="../../assets/images/edit.svg" alt=""> Tahrirlash</button>
     </div>
     <div class="flex space-x-5 items-center">
       <div class="flex justify-center rounded-lg bg-[#EAECF0] border-[1px] border-[#EBEEFC] items-center p-4">
