@@ -23,9 +23,15 @@ export const useSponsors = defineStore("sponsors", () => {
     filterModal.value = bool;
   }
 
+  const page_sp = ref(1);
+  const page_size_sp = ref(10);
+
   async function sponsors({ page, page_size, search, ordering }: Sponsors) {
+    page_sp.value = page;
+    page_size_sp.value = page_size;
     return API_HOME_SPONSORS_LIST(page, page_size, search, ordering)
       .then((res) => {
+        console.log('ishladi')
         if (res?.status === 200) {
           sponsorsList.value = res?.data.results;
           sponsorsCount.value = res?.data.count;
@@ -101,6 +107,8 @@ export const useSponsors = defineStore("sponsors", () => {
   }
 
   return {
+    page_sp,
+    page_size_sp,
     sponsors,
     filterModal,
     filterTrigger,

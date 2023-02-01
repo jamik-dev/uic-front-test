@@ -15,7 +15,7 @@
             </span>
           </div>
         </div>
-        <button @click="logout">
+        <button @click="logout" class="outline-none">
           <img src="@/assets/images/logout.svg" class="cursor-pointer" alt="" />
         </button>
       </div>

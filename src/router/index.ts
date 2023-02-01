@@ -64,8 +64,9 @@ const router = createRouter({
   ]
 })
 
-router.beforeEach((to, _, next) => {
+router.beforeEach((to, from, next) => {
   const sponsors = useSponsors();
+
   if (to.path.includes('/sponsors/')) {
     sponsors.navigationTrigger(false);
     sponsors.sponsorsSingle(Number(to.path.slice(10, to.path.length)))
@@ -73,6 +74,11 @@ router.beforeEach((to, _, next) => {
   } else {
     sponsors.navigationTrigger(true);
   }
+
+  if (from.path.includes('/sponsors/')) {
+    sponsors.sponsors({page: sponsors.page_sp, page_size: sponsors.page_size_sp, search: '', ordering: ''});
+  }
+
   const loggedIn = localStorage.getItem('user')
   if (to.matched.some((record) => record.meta.requiresAuth)) {
     if (loggedIn) {

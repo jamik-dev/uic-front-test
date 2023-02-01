@@ -56,8 +56,8 @@ import {reactive, ref, watch, computed} from 'vue'
 const sponsors = useSponsors()
 
 const pagination = reactive<Sponsors>({
-  page: 1,
-  page_size: 10,
+  page: sponsors.page_sp,
+  page_size: sponsors.page_size_sp,
   search: '',
   ordering: ''
 })
