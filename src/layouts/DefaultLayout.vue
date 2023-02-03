@@ -11,8 +11,10 @@
 
     <Navbar />
 
-    <Navigation v-if="sponsors.navigation" />
-    <NavigationSponsor v-else />
+    <transition name="fade" mode="out-in">
+      <Navigation v-if="sponsors.navigation" />
+      <NavigationSponsor v-else />
+    </transition>
 
     <router-view v-slot="slotProps">
       <transition name="route" mode="out-in">
@@ -26,10 +28,10 @@
 
 <script lang="ts" setup>
 import Navigation from "@/components/global/Navigation.vue";
-import NavigationSponsor from '@/components/local/NavigationSponsor.vue';
+import NavigationSponsor from '@/components/local/Sponsors/NavigationSponsor.vue';
 import Navbar from "@/components/global/Navbar.vue";
-import SponsorsFilter from "@/components/local/SponsorsFilter.vue";
-import SponsorEdit from "@/components/local/SponsorEdit.vue";
+import SponsorsFilter from "@/components/local/Sponsors/SponsorsFilter.vue";
+import SponsorEdit from "@/components/local/Sponsors/SponsorEdit.vue";
 import { useSponsors } from "@/stores/sponsors";
 import { storeToRefs } from 'pinia';
 import { watch } from "vue";
@@ -38,7 +40,7 @@ const sponsors = useSponsors();
 const {editModal} = storeToRefs(sponsors);
 
 watch(editModal, function() {
-  const body = document.querySelector('body') as HTMLBodyElement;
+  const body = document.querySelector('body') as HTMLBodyElement; 
   body.style.overflow = editModal.value ? 'hidden' : 'visible';
 })
 

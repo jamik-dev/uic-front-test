@@ -6,13 +6,13 @@
       </div>
     </div>
     <div class="absolute left-0 right-0 mx-auto my-0 -bottom-20 2xl:-bottom-40 w-[60%]">
-      <img class="w-full" src="../../assets/images/education-banner.svg" alt="">
+      <img class="w-full" src="@/assets/images/education-banner.svg" alt="">
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import AboutSponsor from "@/components/local/AboutSponsor.vue"
+import AboutSponsor from "@/components/local/Sponsors/AboutSponsor.vue"
 import { useSponsors } from "@/stores/sponsors";
 
 const sponsors = useSponsors();
