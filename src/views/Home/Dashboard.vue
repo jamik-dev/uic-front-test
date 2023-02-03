@@ -12,8 +12,8 @@
 </template>
 
 <script lang="ts" setup>
-import DashboardMoney from '@/components/local/DashboardMoney.vue';
-import LineChart from '@/components/local/LineChart.vue';
+import DashboardMoney from '@/components/local/Dashboard/DashboardMoney.vue';
+import LineChart from '@/components/local/Dashboard/LineChart.vue';
 import { useDashboard } from '@/stores/dashboard';
 const dashboard = useDashboard();
 

@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-import Tablet from "@/components/local/Tablet.vue"
+import Tablet from "@/components/local/Sponsors/Tablet.vue"
 import { useSponsors } from "@/stores/sponsors";
 import type Sponsors from "@/types/Sponsors";
 import {reactive} from 'vue'

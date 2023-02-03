@@ -31,7 +31,6 @@ export const useSponsors = defineStore("sponsors", () => {
     page_size_sp.value = page_size;
     return API_HOME_SPONSORS_LIST(page, page_size, search, ordering)
       .then((res) => {
-        console.log('ishladi')
         if (res?.status === 200) {
           sponsorsList.value = res?.data.results;
           sponsorsCount.value = res?.data.count;
