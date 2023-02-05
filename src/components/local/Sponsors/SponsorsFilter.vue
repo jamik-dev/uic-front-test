@@ -116,8 +116,7 @@
           </svg>
           <p :class="{ 'text-[#2E5BFF]': cleanAll2 }" class="text-[#B2B7C1] font-rubik">Tozalash</p>
         </button>
-        <button
-          @click="sponsors.filterTrigger(false)"
+        <button @click="sponsors.filterTrigger(false)"
           class="px-5 py-2 bg-[#3366FF] space-x-1 border-2 border-[#3366FF] rounded-lg flex justify-center items-center">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path

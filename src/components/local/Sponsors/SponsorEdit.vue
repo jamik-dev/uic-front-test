@@ -205,10 +205,10 @@ function choosenTrigger2(id: number) {
 
 const full_name = ref(sponsors.data.full_name);
 const phone = ref(sponsors.data.phone);
-const sum = ref<number|string>(sponsors.data.sum);
+const sum = ref<number | string>(sponsors.data.sum);
 const firm = ref(sponsors.data.firm);
 
-watch(sum, function() {
+watch(sum, function () {
   sum.value = String(sum.value).slice(0, 10)
 })
 
