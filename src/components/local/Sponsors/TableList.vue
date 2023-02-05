@@ -22,7 +22,8 @@
         </p>
       </td>
       <td>
-        <p class="text-sm font-bold">{{ list.spent.toLocaleString('fr-Fr') }} <span class="font-medium text-[#B2B7C1]">UZS</span></p>
+        <p class="text-sm font-bold">{{ list.spent.toLocaleString('fr-Fr') }} <span
+            class="font-medium text-[#B2B7C1]">UZS</span></p>
       </td>
       <td>
         <p class="text-sm">
@@ -33,7 +34,8 @@
         <p class="text-sm" :class="moderateColor">{{ list.get_status_display }}</p>
       </td>
       <td class="rounded-r-lg">
-          <router-link class="outline-none" :to="'/sponsors/' + props.list.id"><img class="mx-auto" src="@/assets/images/eye.svg" alt=""></router-link>
+        <router-link class="outline-none" :to="'/sponsors/' + props.list.id"><img class="mx-auto"
+            src="@/assets/images/eye.svg" alt=""></router-link>
       </td>
     </tr>
     <tr class="h-4"></tr>
@@ -41,7 +43,7 @@
 </template>
 
 <script lang="ts" setup>
-import {computed} from 'vue'
+import { computed } from 'vue'
 
 const props = defineProps({
   list: {
@@ -55,7 +57,7 @@ const props = defineProps({
 })
 
 const moderateColor = computed(() => {
-  if(props.list.get_status_display == 'Yangi') {
+  if (props.list.get_status_display == 'Yangi') {
     return 'text-[#5BABF2]'
   } else if (props.list.get_status_display == 'Moderatsiyada') {
     return 'text-[#FFA445]'

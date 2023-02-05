@@ -1,6 +1,6 @@
 <template>
   <section id="sponsors">
-    <Tablet  v-if="sponsorsList.sponsorsList" />
+    <Tablet v-if="sponsorsList.sponsorsList" />
     <div v-if="!sponsorsList.sponsorsList" class="flex items-center justify-center vue-loader">
       <vue-loaders-ball-pulse color="#5BABF2" scale="2" />
     </div>
@@ -11,7 +11,7 @@
 import Tablet from "@/components/local/Sponsors/Tablet.vue"
 import { useSponsors } from "@/stores/sponsors";
 import type Sponsors from "@/types/Sponsors";
-import {reactive} from 'vue'
+import { reactive } from 'vue'
 
 
 const sponsorsList = useSponsors()
@@ -28,7 +28,7 @@ sponsorsList.sponsors(pagination)
 </script>
 
 <style scoped>
-.vue-loader{
+.vue-loader {
   position: absolute;
   top: 50%;
   left: 50%;
